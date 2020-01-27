@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="321.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxkesaharkkatyo.FXMLclassinfoController">
+    <children>
+        <TextArea editable="false" prefHeight="400.0" prefWidth="600.0" text="1. luokan paketti on kaikista nopein pakettiluokka, jonka vuoksi sitä ei voi lähettää pidemmälle kuin 150 km päähän. 1. luokan paketti on myös nopea, koska sen turvallisuudesta ei välitetä niin paljon, jolloin kaikki särkyvät esineet tulevat menemään rikki matkan aikana.&#10;Max paino: 400kg, Max koko: 500dm3 &#10; &#10;2. luokan paketit ovat turvakuljetuksia, jolloin ne kestävät parhaiten kaiken särkyvän tavaran kuljettamisen. Näitä paketteja on mahdollista kuljettaa jopa Lapista Helsinkiin, sillä matkan aikana käytetään useampaa kuin yhtä TIMOTEI-miestä, jolloin turvallinen kuljetus on taattu. Paketissa on kuitenkin huomattava, että jos se on liian suuri, ei särkyvä esine voi olla heilumatta, joten paketin koon on oltava pienempi kuin muilla pakettiluokilla.&#10;Max paino: 250kg, Max koko: 100dm3 &#10; &#10;3. luokan paketti on TIMOTEI-miehen stressinpurkupaketti. Tämä tarkoittaa sitä, että TIMOTEI-miehellä ollessa huono päivä pakettia paiskotaan seinien kautta automaatista toiseen, joten paketin sisällön on oltava myös erityisen kestävää materiaalia. Myös esineen suuri koko ja paino ovat eduksi, jolloin TIMOTEI-mies ei jaksa heittää pakettia seinälle kovin montaa kertaa. Koska paketit päätyvät kohteeseensa aina seinien kautta, on tämä hitain mahdollinen kuljetusmuoto paketille.&#10;Max paino: 1000kg, Max koko: 1000dm3 " wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    </children>
+</AnchorPane>

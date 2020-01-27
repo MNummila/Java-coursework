@@ -1,0 +1,90 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17.7.2018, 15:25:09
+    Author     : Mikko
+*/
+
+.root{
+    -fx-background-image: url("3.jpg");
+    -fx-background-position: center;
+    -fx-background-size:  stretch;
+}
+.label{
+    -fx-text-fill: #ffffff;
+}
+
+#breakableCheck{
+    -fx-text-fill: #ffffff;    
+}
+#errorlabel{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff0000;
+
+}
+#resetmessage{
+    -fx-font-size: 50px;
+    -fx-font-family: "Arial";
+    -fx-text-fill:  #ff0000;
+}
+#chooselabel{
+    -fx-font-size: 15px;
+}
+.button{
+    -fx-text-fill:  #ffffff;
+    -fx-background-color: #009933,linear-gradient( #009933,#00cc00);
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-font-family: "Times New Roman";
+    -fx-effect:  dropshadow( three-pass-box, #ccffcc, 3,0.0,0,1);
+}
+#resetButton{
+    -fx-font-size: 35px;
+    -fx-background-color: #ff3333;
+}
+.choice-box{
+    -fx-background-color: #009933,linear-gradient( #009933,#00cc00);
+    -fx-text-fill:  #000000;
+    -fx-font-weight: bold;
+}
+.choice-box .context-menu {
+    -fx-background-color:  #00cc00;
+}
+.choice-box .menu-item:focused{
+    -fx-background-color:  #006633;
+} 
+.table-view{
+    -fx-background-color: #ccffcc;
+    -fx-text-fill: #666970;
+}
+.table-view .column-header{
+    -fx-background-color: #00cc00;
+    -fx-text-fill:  #000000;
+}
+.table-row-cell{
+    -fx-background-color:  #ccffcc;
+}
+.table-view .filler{
+    -fx-background-color: #00cc00;
+}
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #99ff99;
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+.tab-pane .tab{
+    -fx-background-color:  #006633;
+}
+.tab .tab-label{
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.tab-pane{
+    -fx-tab-min-width: 90px;
+}

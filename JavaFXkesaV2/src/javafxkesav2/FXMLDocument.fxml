@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="527.9999000000025" prefWidth="542.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxkesav2.FXMLDocumentController">
+  <children>
+    <Button fx:id="addMoneyButton" layoutX="360.0" layoutY="396.0" mnemonicParsing="false" onAction="#addMoneyAction" prefHeight="77.0" prefWidth="146.0" text="Lisää rahee" textOverrun="CLIP" underline="false" wrapText="true">
+      <font>
+        <Font name="System Bold" size="20.0" />
+      </font>
+    </Button>
+    <Button fx:id="buySodaButton" layoutX="30.0" layoutY="407.0" mnemonicParsing="false" onAction="#buySodaAction" prefHeight="35.0" prefWidth="97.0" text="osta limu">
+      <font>
+        <Font size="15.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button fx:id="moneyOutButton" font="$x1" layoutX="169.0" layoutY="407.0" mnemonicParsing="false" onAction="#moneyOutAction" prefHeight="35.0" prefWidth="97.0" text="rahet ulos" />
+    <TextArea id="label" fx:id="textArea" editable="false" layoutX="23.0" layoutY="14.0" prefHeight="281.0" prefWidth="498.0" wrapText="true" />
+    <Slider fx:id="moneySlider" layoutX="304.0" layoutY="343.0" majorTickUnit="5.0" max="10.0" minorTickCount="4" onDragDone="#moneySliderAction" prefWidth="217.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="0.0" />
+    <ComboBox id="sodanameBox" fx:id="sodaNameBox" editable="false" layoutX="30.0" layoutY="328.0" prefHeight="35.000099999997474" prefWidth="108.00009999999747" promptText="        limu" visibleRowCount="3">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Pepsi Max" />
+          <String fx:value="Coca-Cola Zero" />
+          <String fx:value="Fanta Zero" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="sodaSizeBox" layoutX="163.0" layoutY="328.0" prefHeight="35.0" prefWidth="108.0" promptText="         koko" visibleRowCount="2">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="1.5" />
+          <String fx:value="0.5" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label fx:id="showMoneyLabel" layoutX="304.0" layoutY="295.0" prefHeight="35.0" prefWidth="210.0" text="" />
+    <Button fx:id="showBottlesbutton" layoutX="30.0" layoutY="457.0" mnemonicParsing="false" onAction="#showBottlesAction" prefHeight="23.0" prefWidth="97.0" text="Näytä pullot" />
+    <Button fx:id="printReceiptButtob" layoutX="169.0" layoutY="457.0" mnemonicParsing="false" onAction="#printReceiptAction" prefHeight="23.0" prefWidth="97.0" text="Tulosta kuitti" />
+  </children>
+</AnchorPane>

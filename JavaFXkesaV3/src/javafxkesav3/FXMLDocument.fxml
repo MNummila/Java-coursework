@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="539.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxkesav3.FXMLDocumentController">
+  <children>
+    <Label layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="222.0" text="Finnkinon elokuvat">
+      <font>
+        <Font size="25.0" />
+      </font>
+    </Label>
+    <Label layoutX="14.0" layoutY="68.0" prefWidth="100.0" text="Valitse teatteri:" textAlignment="CENTER" />
+    <Label layoutX="14.0" layoutY="128.0" prefWidth="91.0" text="Alkamisväli:" textAlignment="CENTER" />
+    <ChoiceBox id="chooseTheaterBox" fx:id="chooseTheatreBox" layoutX="14.0" layoutY="95.0" prefWidth="265.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <TextField fx:id="showingDayField" layoutX="298.0" layoutY="94.0" prefWidth="222.0" promptText="Esityspäivä pp.kk.vvvv" />
+    <TextField fx:id="startingTimeField" layoutX="14.0" layoutY="156.0" prefWidth="265.0" promptText="Alkamisaika HH:mm" />
+    <TextField fx:id="endingTimeField" layoutX="298.0" layoutY="156.0" prefWidth="222.0" promptText="Päättymisaika HH:mm" />
+    <Button fx:id="listFilmsButton" layoutX="168.0" layoutY="195.0" mnemonicParsing="false" onAction="#listFilmsAction" prefWidth="111.0" text="Listaa elokuvat" />
+    <Label layoutX="14.0" layoutY="247.0" prefWidth="154.0" text="Tai hae elokuvan nimellä:">
+      <font>
+        <Font size="12.0" />
+      </font>
+    </Label>
+    <TextField fx:id="filmNameField" layoutX="161.0" layoutY="244.0" prefWidth="252.0" promptText="Anna elokuvan nimi" />
+    <Button fx:id="searcNameButton" layoutX="429.0" layoutY="245.0" mnemonicParsing="false" onAction="#searchNameAction" prefWidth="91.0" text="Nimihaku" />
+    <ListView id="listViev" fx:id="listViewArea" blendMode="SRC_OVER" focusTraversable="true" layoutX="0.0" layoutY="277.0" opacity="1.0" orientation="VERTICAL" pickOnBounds="false" prefHeight="338.0" prefWidth="539.0" visible="true" />
+  </children>
+</AnchorPane>

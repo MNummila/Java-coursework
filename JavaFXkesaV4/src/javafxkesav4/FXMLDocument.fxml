@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="-1.0" prefWidth="596.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxkesav4.FXMLDocumentController">
+  <children>
+    <GridPane gridLinesVisible="false" minHeight="-1.0" prefHeight="-1.0" prefWidth="-1.0" snapToPixel="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <WebView fx:id="web" fontSmoothingType="LCD" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" pickOnBounds="true" prefHeight="0.0" prefWidth="0.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <GridPane maxHeight="50.0" minHeight="50.0" minWidth="-1.0" prefHeight="50.0" prefWidth="-1.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="TOP">
+          <children>
+            <ComboBox fx:id="urlComboBox" editable="true" onAction="#goToButtonAction" prefHeight="21.0" prefWidth="5000.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshButtonAction" text="Refresh" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+            <Button fx:id="goToButton" mnemonicParsing="false" onAction="#goToButtonAction" text="-&gt;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+            <Button fx:id="prevButton" mnemonicParsing="false" onAction="#prevButtonAction" text="Prev" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextButtonAction" text="Next" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-1.0" minWidth="10.0" prefWidth="390.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="40.0" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints fillHeight="true" maxHeight="-Infinity" minHeight="10.0" percentHeight="0.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+          </rowConstraints>
+        </GridPane>
+        <GridPane maxHeight="30.0" minHeight="30.0" prefHeight="30.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+          <children>
+            <Button fx:id="loadButton" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" mnemonicParsing="false" onAction="#loadButtonAction" prefHeight="-1.0" prefWidth="-1.0" text="initialize script" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+            <Button fx:id="drawButton" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" mnemonicParsing="false" onAction="#drawButtonAction" prefHeight="-1.0" prefWidth="-1.0" text="execute script" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="-1.0" minWidth="50.0" prefWidth="-1.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="NEVER" />
+        <RowConstraints maxHeight="-1.0" minHeight="0.0" percentHeight="-1.0" prefHeight="500.0" valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="BOTTOM" vgrow="NEVER" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

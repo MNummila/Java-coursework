@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="539.0" prefWidth="546.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxkesav1.FXMLDocumentController">
+  <children>
+    <Button id="button" fx:id="saveButton" layoutX="448.0" layoutY="468.0" onAction="#SaveButtonAction" text="Tallennus" />
+    <Label fx:id="label" layoutX="45.0" layoutY="0.0" minHeight="16.0" minWidth="69.0" prefHeight="136.0" prefWidth="249.0" text="" />
+    <TextField fx:id="inputField" layoutX="25.0" layoutY="467.0" prefWidth="200.0" />
+    <Button fx:id="loadButton" layoutX="361.0" layoutY="468.0" mnemonicParsing="false" onAction="#LoadButtonAction" text="Lataus" />
+    <TextArea fx:id="textField" layoutX="25.0" layoutY="22.0" prefHeight="423.0" prefWidth="507.0" wrapText="true" />
+  </children>
+</AnchorPane>

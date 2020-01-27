@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxkesaharkkatyo.FXMLDocumentController">
+    <children>
+        <TabPane fx:id="tabi" prefHeight="792.0" prefWidth="794.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab fx:id="sendtab" text="Pakettien lähetys">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane prefHeight="763.0" prefWidth="774.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <GridPane maxHeight="-Infinity" prefHeight="226.0" prefWidth="1250.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                            <children>
+                                                <Button fx:id="clearMapButton" mnemonicParsing="false" onAction="#clearMapAction" text="Poista reitit" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <Button id="add" fx:id="addToMapButton" mnemonicParsing="false" onAction="#addToMapAction" text="Lisää valittu kaupunki kartalle" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                <ChoiceBox id="samrtpostChoiceBox" fx:id="smartpostChoiceBox" prefWidth="361.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                    <items>
+                                                        <FXCollections fx:factory="observableArrayList" />
+                                                    </items>
+                                                </ChoiceBox>
+                                                <Button fx:id="createPackage" mnemonicParsing="false" onAction="#createPackageAction" text="Luo paketti" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                <Button fx:id="sendPackageButton" mnemonicParsing="false" onAction="#sendPackageAction" text="Lähetä paketti" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                                <Button fx:id="removePackageButton" mnemonicParsing="false" onAction="#removePackageAction" text="Poista paketti" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <Label fx:id="errorlabel" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                    <font>
+                                                        <Font name="System Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <GridPane GridPane.columnIndex="1">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.0" minWidth="10.0" prefWidth="160.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="517.0" minWidth="10.0" prefWidth="464.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <ChoiceBox fx:id="packageChoiceBox" prefWidth="315.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                                                            <items>
+                                                                <FXCollections fx:factory="observableArrayList">
+                                                                    <String fx:value="Item 1" />
+                                                                    <String fx:value="Item 2" />
+                                                                    <String fx:value="Item 3" />
+                                                                </FXCollections>
+                                                            </items>
+                                                        </ChoiceBox>
+                                                        <Label fx:id="chooselabel" text="Valitse paketti:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="626.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="624.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                        </GridPane>
+                                        <WebView fx:id="webview" prefHeight="545.0" prefWidth="1250.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                    </children>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="538.0" vgrow="ALWAYS" />
+                                        <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="240.0" />
+                                    </rowConstraints>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="logtab" text="Lokitietoja">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tableview" layoutY="31.0" prefHeight="733.0" prefWidth="774.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+                                    <columns>
+                                    </columns>
+                                </TableView>
+                                <Button fx:id="smartpostsButton" layoutY="6.0" mnemonicParsing="false" onAction="#showSmartposts" text="Smartpost automaatit" />
+                                <Button fx:id="packetsButton" layoutX="139.0" layoutY="6.0" mnemonicParsing="false" onAction="#showPackets" text="Paketit" />
+                                <TableView fx:id="tableviewPackages" layoutY="31.0" prefHeight="734.0" prefWidth="774.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0" />
+                                <TableView fx:id="tableviewtems" layoutX="1.0" layoutY="31.0" prefHeight="741.0" prefWidth="1250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0" />
+                                <Button fx:id="itemsButton" layoutX="199.0" layoutY="6.0" mnemonicParsing="false" onAction="#showItems" text="Esineet" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="startagaintab" onSelectionChanged="#startagainaction" text="Aloita alusta">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane prefHeight="771.0" prefWidth="1250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetAction" prefHeight="129.0" prefWidth="386.0" text="RESET DATABASE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                            <font>
+                                                <Font name="System Bold" size="38.0" />
+                                            </font>
+                                        </Button>
+                                        <Label fx:id="resetmessage" text="Tyhjentää tietokannan ja alustaa sen uudelleen." GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                            <font>
+                                                <Font size="22.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
